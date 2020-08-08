@@ -2,18 +2,14 @@ import sys
 
 class Menu:
  
- ''' Displays a list of choices on the terminal for  the user to run '''
- 
- 
  
  def __init__(self):
  
  
-      #instantiate a new task manager object
+      
       self.random = Random() 
  
-      #defines the actions the user can perform
-      #notice how for choices 1-5 we call the functions we defined in our TaskManager class
+      
       self.choices = {
  
            "1" : self.random.create_user,
