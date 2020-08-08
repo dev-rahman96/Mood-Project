@@ -1,6 +1,8 @@
 import json
 import requests
-import os
-import pickle
-from user import User
 
+
+
+
+response = requests.get("http://yerkee.com/api/fortune")
+print(response.status_code)
