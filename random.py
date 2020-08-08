@@ -2,10 +2,8 @@ import json
 import requests
 
 
-
-
-response = requests.get("http://yerkee.com/api/fortune")
-print(response.status_code)
+response = requests.get("http://yerkee.com/api/fortune/wisdom")
+print(response)
 
 class Random:
   def __init__(self):
