@@ -1,5 +1,6 @@
 import json
 import requests
+from user import User
 
 
 response = requests.get("http://yerkee.com/api/fortune/wisdom")
@@ -15,14 +16,24 @@ class Random:
     pass
 
   def create_user(self):
-    pass
+    user_name = input("What do you want your username to be? ")
+    user_id = self.latest_ID
+    user = User(user_name, user_id)
+    self.user[user_name] = user
+    print("Username stored! ")
 
 
   def update_user(self):
     pass
 
+
   def read(self):
     pass
 
+
   def delete_user(self):
-    pass
+    name = input("Please enter the username you want to delete: ")
+    if name in self.user.keys():
+      self.user.pop(name)
+    else:
+      print("The username does not exist ")
