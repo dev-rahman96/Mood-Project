@@ -24,7 +24,10 @@ class Random:
 
 
   def update_user(self):
-    pass
+    old_username = input("Enter current username:")
+    updated_username = input("Enter new username:")
+    self.user.pop(old_username) #Should this be self.userlist?
+    user.append(updated_username)
 
 
   def read(self):
