@@ -26,13 +26,8 @@ class Random:
   def update_user(self):
     old_username = input("Enter current username:")
     updated_username = input("Enter new username:")
-    self.user.pop(old_username) #Should this be self.userlist?
-    user.append(updated_username)
-
-
-  def read(self):
-    pass
-
+    self.user.pop(old_username) 
+    self.user.append(updated_username)
 
   def delete_user(self):
     name = input("Please enter the username you want to delete: ")
