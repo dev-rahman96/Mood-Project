@@ -1,6 +1,5 @@
 import json
 import requests
-import pickle
 from user import User
 
 
@@ -36,14 +35,5 @@ class Random:
       self.user.pop(name)
     else:
       print("The username does not exist ")
-      
-  def save(self):
-    with open("tasks.txt", "wb") as fp:   #Pickling
-      pickle.dump(self.task_list, fp)
-      print("\nTasks saved! \n\n")
-      
-  def load(self):
-    with open("tasks.txt", "rb") as fp:   #Unpickling
-      self.task_list = pickle.load(fp)
-      self.latest_ID = len(self.task_list)
-      print("Tasks loaded!")
+  
+  
