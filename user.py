@@ -7,6 +7,7 @@ class User:
         return self.rand
     
     def set_ran(self):
+        pass
 
     def ran(self):
         current_ran = input (f"What is your current mood?")

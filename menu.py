@@ -1,4 +1,5 @@
 import sys
+from random import Random
 
 class Menu:
  
