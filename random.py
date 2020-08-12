@@ -3,17 +3,27 @@ import requests
 from user import User
 
 
-response = requests.get("http://yerkee.com/api/fortune/wisdom")
-print(response)
+#response = requests.get("http://yerkee.com/api/fortune/wisdom")
+#print(response)
+
+class Fortune:
+  def __init__(self):
+    self.URL = "http://yerkee.com/api/fortune/wisdom"
+    self.init()
+      
+  def init(self):
+    try:
+      req = requests.get(self.URL)
+      res = req.json()
+    except:
+        print("Network error")
+
 
 class Random:
   def __init__(self):
     self.user = {}
     self.latest_ID = 1
 
-
-  def api_call(self):
-    pass
 
   def create_user(self):
     user_name = input("What do you want your username to be? ")
