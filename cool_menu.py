@@ -1,5 +1,5 @@
 import sys
-from random import Random
+from Fortune_Cookie import Random
 
 class Menu:
  

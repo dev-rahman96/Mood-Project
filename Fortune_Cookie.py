@@ -1,6 +1,7 @@
 import json
 import requests
-from user import User
+from user_class import User
+
 
 
 #response = requests.get("http://yerkee.com/api/fortune/wisdom")
@@ -56,5 +57,9 @@ class Random:
       self.task_list = pickle.load(fp)
       self.latest_ID = len(self.task_list)
       print("Tasks loaded!")
+      
+  
+  def api_call():
+    pass
   
   

@@ -1,3 +1,5 @@
+import Fortune_Cookie
+
 class User:
     def __init__(self):
         self.random()
@@ -14,6 +16,7 @@ class User:
         ran_id = self.latest_ID
         self.randomlist.append
         (current_ran, ran_id)
+        
 
         
             
