@@ -1,11 +1,32 @@
 import json
 import requests
-import user_class
+
 
 
 
 #response = requests.get("http://yerkee.com/api/fortune/wisdom")
 #print(response)
+
+class User:
+    def __init__(self, name, task_id):
+        # self.random()
+        #self.latest_ID = 1
+        self.name = name
+        self.id = task_id
+        
+        
+    
+    # def get_ran(self):
+    #     return self.rand
+    
+    # def set_ran(self):
+    #     pass
+
+    # def ran(self):
+    #     current_ran = input (f"What is your current mood?")
+    #     ran_id = self.latest_ID
+    #     self.randomlist.append
+    #     (current_ran, ran_id)
 
 class Fortune:
   def __init__(self):
@@ -62,17 +83,17 @@ class Random:
   def api_call():
     pass
   
-  def save(self):
+#   def save(self):
     
-  #prompt the user for a file to import
-    filter = "JSON file (*.json)|*.json|All Files (*.*)|*.*||"
-    filename = rs.OpenFileName("Open JSON File", filter)
+#   #prompt the user for a file to import
+#     filter = "JSON file (*.json)|*.json|All Files (*.*)|*.*||"
+#     filename = rs.OpenFileName("Open JSON File", filter)
 
-#Read JSON data into the datastore variable
-    if filename:
-        with open(filename, 'r') as f:
-            datastore = json.load(f)
+# #Read JSON data into the datastore variable
+#     if filename:
+#         with open(filename, 'r') as f:
+#             datastore = json.load(f)
 
-#Use the new datastore datastructure
-    # print datastore["office"]["parking"]["style"]
+# #Use the new datastore datastructure
+#     # print datastore["office"]["parking"]["style"]
   
