@@ -87,15 +87,20 @@ class User_Manager:
     user_to_update.name = user_name
     return print(f"Your user has been updated: {user_to_update}")
     self.show_user()
+   
+  def delete_art(self):
+    latest_id = int(input(f"Enter the ID of the user to delete: \n"))
+    latest_id = latest_id - 1
+    self.user.pop(latest_id)
+    print(f"The user has been Deleted!")
+    self.show_user()  
 
-    
-
-  def delete_user(self):
-    name = input("Please enter the username you want to delete: ")
-    if name in self.user.keys():
-      self.user.pop(name)
-    else:
-      print("The username does not exist ")
+  #def delete_user(self):
+   # name = input("Please enter the username you want to delete: ")
+    #if name in self.user.keys():
+     # self.user.pop(name)
+    #else:
+     # print("The username does not exist ")
       
   def save(self):
     with open('data.json' , 'w') as fp:
