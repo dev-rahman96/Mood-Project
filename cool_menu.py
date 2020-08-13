@@ -1,5 +1,5 @@
 import sys
-from Fortune_Cookie import Random
+from Fortune_Cookie import User_Manager
 
 class Menu:
  
@@ -8,18 +8,18 @@ class Menu:
  
  
       
-      self.random = Random() 
+      self.user_manager = User_Manager() 
  
       
       self.choices = {
  
-           "1" : self.random.create_user,
+           "1" : self.user_manager.create_user,
  
-           "2" : self.random.update_user,
+           "2" : self.user_manager.update_user,
  
-           "3" : self.random.api_call,
+           "3" : self.user_manager.api_call,
 
-           "4" : self.random.delete_user,
+           "4" : self.user_manager.delete_user,
 
            "Q" : self.quit
  
