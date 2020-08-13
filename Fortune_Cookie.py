@@ -70,30 +70,26 @@ class User_Manager:
       print("The username does not exist ")
       
   # def save(self):
-  #   with open("tasks.txt", "wb") as fp:   #Pickling
-  #     pickle.dump(self.task_list, fp)
-  #     print("\nTasks saved! \n\n")
+  #   with open('data.json' , 'w') as fp:
+  #     json.dump(user, fp , sort_keys=True, indent=4)
       
   # def load(self):
-  #   with open("tasks.txt", "rb") as fp:   #Unpickling
-  #     self.task_list = pickle.load(fp)
-  #     self.latest_ID = len(self.task_list)
-  #     print("Tasks loaded!")
+  #   with open('data.json' , 'r') as fp:
+  #     user = json.load(fp)
+      
+  def save(self):
+      with open(test.json, 'wb') as outfile:
+        json.dump(user, outfile)
+      with open(test.json) as infile:
+        user = json.load(infile)
+      
+
       
   
   def api_call():
     pass
   
-#   def save(self):
-    
-#   #prompt the user for a file to import
-#     filter = "JSON file (*.json)|*.json|All Files (*.*)|*.*||"
-#     filename = rs.OpenFileName("Open JSON File", filter)
 
-# #Read JSON data into the datastore variable
-#     if filename:
-#         with open(filename, 'r') as f:
-#             datastore = json.load(f)
 
 # #Use the new datastore datastructure
 #     # print datastore["office"]["parking"]["style"]

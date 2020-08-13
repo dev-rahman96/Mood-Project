@@ -17,7 +17,7 @@ class Menu:
  
            "2" : self.user_manager.update_user,
  
-           "3" : self.user_manager.api_call,
+           "3" : self.user_manager.save,
 
            "4" : self.user_manager.delete_user,
 
@@ -41,7 +41,7 @@ class Menu:
  
              2. Update User
  
-             3. Fortune
+             3. Save the current user list
 
              4. Delete User
 
