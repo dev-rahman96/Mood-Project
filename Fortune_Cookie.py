@@ -8,10 +8,10 @@ import requests
 #print(response)
 
 class User:
-    def __init__(self, user_name, user_id):
+    def __init__(self, user_name, latest_id):
         # self.random()
-        self.user_id = 1
-        self.user_name = user_name
+        self.name = user_name
+        self.id = latest_id
         
         
         
@@ -45,7 +45,6 @@ class User_Manager:
   def __init__(self):
     self.first_ID = 1
     self.user = []
-    self.latest_ID = 1
 
   def create_user(self):
     user_name = input(f"What is the name of the user?\n")
@@ -56,7 +55,7 @@ class User_Manager:
     self.first_ID += 1
     self.show_user()
     return(latest_id)
-    
+
   #def create_user(self):
     #user_name = input("What do you want your username to be? ")
    # user_id = self.latest_ID
@@ -80,10 +79,15 @@ class User_Manager:
 
 
 
-  def update_user(self):
-    pass
+ def update_user(self):
+    latest_id = int(input(f"Enter the ID of the user to update: \n"))
+    latest_id = latest_id - 1
+    user_name = input(f"What is the new name for user {latest_id}: \n")
+    user_to_update = self.user[int(latest_id)]
+    user_to_update.name = user_name
+    return print(f"Your user has been updated: {user_to_update}")
+    self.show_user()
 
-      
     
 
   def delete_user(self):
