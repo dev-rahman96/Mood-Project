@@ -8,11 +8,11 @@ import requests
 #print(response)
 
 class User:
-    def __init__(self, name, task_id):
+    def __init__(self, user_name, user_id):
         # self.random()
-        #self.latest_ID = 1
-        self.name = name
-        self.id = task_id
+        self.user_id = 1
+        self.user_name = user_name
+        
         
         
     
@@ -43,7 +43,8 @@ class Fortune:
 
 class User_Manager:
   def __init__(self):
-    self.user = {}
+    self.first_ID = 1
+    self.user = []
     self.latest_ID = 1
 
 
@@ -53,38 +54,45 @@ class User_Manager:
     user = User(user_name, user_id)
     self.user[user_name] = user
     print("Username stored! ")
+    
+  def show_user(self):
+    print("""
+    **************************
+    Your User Listing:
+    """)
+    for person in self.user:
+      print(person)
+
+    print("""
+
+    **************************
+    """)
+    return self.user
+
 
 
   def update_user(self):
-    old_username = input("Enter current username:")
-    updated_username = input("Enter new username:")
-    self.user.pop(old_username) 
-    self.user.append(updated_username)
+    pass
+
+      
+    
 
   def delete_user(self):
     name = input("Please enter the username you want to delete: ")
     if name in self.user.keys():
       self.user.pop(name)
-      
     else:
       print("The username does not exist ")
       
-  # def save(self):
-  #   with open('data.json' , 'w') as fp:
-  #     json.dump(user, fp , sort_keys=True, indent=4)
-      
-  # def load(self):
-  #   with open('data.json' , 'r') as fp:
-  #     user = json.load(fp)
-      
   def save(self):
-      with open(test.json, 'wb') as outfile:
-        json.dump(user, outfile)
-      with open(test.json) as infile:
-        user = json.load(infile)
+    with open('data.json' , 'w') as fp:
+      json.dump(user, fp , sort_keys=True, indent=4)
+      
+  def load(self):
+    with open('data.json' , 'r') as fp:
+      user = json.load(fp)
       
 
-      
   
   def api_call():
     pass

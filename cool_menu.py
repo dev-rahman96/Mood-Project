@@ -14,12 +14,14 @@ class Menu:
       self.choices = {
  
            "1" : self.user_manager.create_user,
+           
+           "2" : self.user_manager.show_user,
  
-           "2" : self.user_manager.update_user,
+           "3" : self.user_manager.update_user,
  
-           "3" : self.user_manager.save,
+           "4" : self.user_manager.save,
 
-           "4" : self.user_manager.delete_user,
+           "5" : self.user_manager.delete_user,
 
            "Q" : self.quit
  
@@ -38,12 +40,14 @@ class Menu:
  
  
              1. Create User
+             
+             2. Show the user list
  
-             2. Update User
+             3. Update User
  
-             3. Save the current user list
+             4. Save the current user list
 
-             4. Delete User
+             5. Delete User
 
              Q. Quit program
  
