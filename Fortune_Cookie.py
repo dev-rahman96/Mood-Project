@@ -41,7 +41,7 @@ class Fortune:
         print("Network error")
 
 
-class Random:
+class User_Manager:
   def __init__(self):
     self.user = {}
     self.latest_ID = 1
@@ -65,6 +65,7 @@ class Random:
     name = input("Please enter the username you want to delete: ")
     if name in self.user.keys():
       self.user.pop(name)
+      
     else:
       print("The username does not exist ")
       
