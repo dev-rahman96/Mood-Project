@@ -88,11 +88,11 @@ class User_Manager:
     return print(f"Your user has been updated: {user_to_update}")
     self.show_user()
    
-  def delete_art(self):
+  def delete_user(self):
     latest_id = int(input(f"Enter the ID of the user to delete: \n"))
     latest_id = latest_id - 1
     self.user.pop(latest_id)
-    print(f"The user has been Deleted!")
+    print(f"The user has been deleted!")
     self.show_user()  
 
   #def delete_user(self):
