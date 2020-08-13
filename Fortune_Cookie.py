@@ -47,13 +47,22 @@ class User_Manager:
     self.user = []
     self.latest_ID = 1
 
-
   def create_user(self):
-    user_name = input("What do you want your username to be? ")
-    user_id = self.latest_ID
-    user = User(user_name, user_id)
-    self.user[user_name] = user
-    print("Username stored! ")
+    user_name = input(f"What is the name of the user?\n")
+    latest_id = self.first_ID
+    new_user = User(user_name, latest_id)
+    self.user.append(new_user)
+    print(f"New user created with ID: {latest_id}")
+    self.first_ID += 1
+    self.show_user()
+    return(latest_id)
+    
+  #def create_user(self):
+    #user_name = input("What do you want your username to be? ")
+   # user_id = self.latest_ID
+   # user = User(user_name, user_id)
+   # self.user[user_name] = user
+   # print("Username stored! ")
     
   def show_user(self):
     print("""
