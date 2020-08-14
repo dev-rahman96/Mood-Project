@@ -29,16 +29,10 @@ class User:
     #     (current_ran, ran_id)
 
 class Fortune:
-  def __init__(self):
-    self.URL = "http://yerkee.com/api/fortune/wisdom"
-    self.init()
-      
-  def init(self):
-    try:
-      req = requests.get(self.URL)
-      res = req.json()
-    except:
-        print("Network error")
+  def fortune_cookie(self):
+    response = requests.get("http://yerkee.com/api/fortune/wisdom")
+    wisdom = json.loads(response.text)
+ 
 
 
 class User_Manager:
@@ -103,13 +97,13 @@ class User_Manager:
      # print("The username does not exist ")
       
   def save(self):
-    with open('data.json' , 'w') as fp:
-      json.dump(user, fp , sort_keys=True, indent=4)
+    with open('user_file.json' , 'w') as write_file:
+      json.dump(user, write_file , indent=4)
       
   def load(self):
-    with open('data.json' , 'r') as fp:
-      user = json.load(fp)
-      
+    with open('user_file.json' , 'r') as read_file:
+      user = json.load(read_file)
+   
 
   
   def api_call():
