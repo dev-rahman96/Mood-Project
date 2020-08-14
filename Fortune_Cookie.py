@@ -69,7 +69,7 @@ class User_Manager:
 
     **************************
     """)
-    return self.userlist
+    return print(f"userlist")
 
 
 
