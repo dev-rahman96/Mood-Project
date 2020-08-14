@@ -38,13 +38,13 @@ class Fortune:
 class User_Manager:
   def __init__(self):
     self.first_ID = 1
-    self.user = []
+    self.userlist = []
 
   def create_user(self):
     user_name = input(f"What is the name of the user?\n")
     latest_id = self.first_ID
     new_user = User(user_name, latest_id)
-    self.user.append(new_user)
+    self.userlist.append(new_user)
     print(f"New user created with ID: {latest_id}")
     self.first_ID += 1
     self.show_user()
@@ -62,14 +62,14 @@ class User_Manager:
     **************************
     Your User Listing:
     """)
-    for person in self.user:
+    for person in self.userlist:
       print(person)
 
     print("""
 
     **************************
     """)
-    return self.user
+    return self.userlist
 
 
 
@@ -77,7 +77,7 @@ class User_Manager:
     latest_id = int(input(f"Enter the ID of the user to update: \n"))
     latest_id = latest_id - 1
     user_name = input(f"What is the new name for user {latest_id}: \n")
-    user_to_update = self.user[int(latest_id)]
+    user_to_update = self.userlist[int(latest_id)]
     user_to_update.name = user_name
     return print(f"Your user has been updated: {user_to_update}")
     self.show_user()
@@ -85,7 +85,7 @@ class User_Manager:
   def delete_user(self):
     latest_id = int(input(f"Enter the ID of the user to delete: \n"))
     latest_id = latest_id - 1
-    self.user.pop(latest_id)
+    self.userlist.pop(latest_id)
     print(f"The user has been deleted!")
     self.show_user()  
 
@@ -98,11 +98,11 @@ class User_Manager:
       
   def save(self):
     with open('user_file.json' , 'w') as write_file:
-      json.dump(user, write_file , indent=4)
+      json.dump(userlist, write_file , indent=4)
       
   def load(self):
     with open('user_file.json' , 'r') as read_file:
-      user = json.load(read_file)
+      userlist = json.load(read_file)
    
 
   
