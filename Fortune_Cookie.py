@@ -73,7 +73,7 @@ class User_Manager:
 
 
 
- def update_user(self):
+  def update_user(self):
     latest_id = int(input(f"Enter the ID of the user to update: \n"))
     latest_id = latest_id - 1
     user_name = input(f"What is the new name for user {latest_id}: \n")
